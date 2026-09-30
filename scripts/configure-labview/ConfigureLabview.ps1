@@ -48,7 +48,7 @@ try {
     Write-Information "Configuring LabVIEW $LabVIEWVersion settings" -InformationAction Continue
     
     # Determine LabVIEW installation path
-    $LabVIEWBasePath = "C:\Program Files (x86)\National Instruments\LabVIEW $LabVIEWVersion"
+    $LabVIEWBasePath = "C:\Program Files\National Instruments\LabVIEW $LabVIEWVersion"
     $IniPath = Join-Path $LabVIEWBasePath "LabVIEW.ini"
     $LabVIEWExePath = Join-Path $LabVIEWBasePath "LabVIEW.exe"
     
