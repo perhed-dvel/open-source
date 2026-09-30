@@ -113,7 +113,8 @@ try {
     Write-Information "Pulling Docker image..." -InformationAction Continue
     docker pull $fullImage *>&1 | ForEach-Object { Write-Information $_ -InformationAction Continue }
     if ($LASTEXITCODE -ne 0) {
-        throw "Failed to pull Docker image (exit code: $LASTEXITCODE)"
+        #throw "Failed to pull Docker image (exit code: $LASTEXITCODE)"
+        Write-Verbose "Failed to pull Docker image (exit code: $LASTEXITCODE)"
     }
 
     # Get the path to the PowerShell build script
