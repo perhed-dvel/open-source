@@ -80,7 +80,7 @@ if (-not [string]::IsNullOrWhiteSpace($TargetName)) {
 if (-not [string]::IsNullOrWhiteSpace($BuildSpecName)) {
     $cliArgs += '-BuildSpecName', $BuildSpecName
 }
-
+$cliArgs += '-PortNumber 3363'
 $cliArgs += '-Headless'
 
 Write-Host "Executing: LabVIEWCLI $($cliArgs -join ' ')"
