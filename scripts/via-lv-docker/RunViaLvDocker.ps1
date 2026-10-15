@@ -107,8 +107,7 @@ Write-Information "Using config: $configToUse" -InformationAction Continue
 Write-Information "Pulling Docker image: ${DockerImage}:${LabviewVersion}" -InformationAction Continue
 docker pull "${DockerImage}:${LabviewVersion}"
 if ($LASTEXITCODE -ne 0) {
-    #throw "Failed to pull Docker image (exit code: $LASTEXITCODE)"
-    Write-Verbose "Failed to pull Docker image (exit code: $LASTEXITCODE)"
+    throw "Failed to pull Docker image (exit code: $LASTEXITCODE)"
 }
 
 # Run VI Analyzer in container
